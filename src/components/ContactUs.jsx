@@ -116,7 +116,7 @@ const ContactUs = () => {
           )}
         </div>
         {/* Right Side Image (hidden on mobile, 50% out of box) */}
-        <div className="hidden md:block flex-1 relative order-1 md:order-2 lg:right-[-22%] right-[-10%] ">
+        <div className="hidden md:block flex-1 relative order-1 md:order-2 lg:right-[-14%] right-[-10%] ">
           <img
             src={'/ContactSideImg.png'}
             alt="Contact"
