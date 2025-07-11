@@ -10,6 +10,7 @@ import ProcessGrid from './components/ProcessGrid.jsx'
 import TeamGrid from './components/TeamGrid.jsx'
 import TestimonialBlock from './components/TestimonialBlock.jsx'
 import ContactUs from './components/ContactUs.jsx'
+import Footer from './components/Footer.jsx'
 function App() {
   return (
     <>
@@ -29,6 +30,7 @@ function App() {
       <TestimonialBlock />
       <HeadingAndSubheading id={6}/>
       <ContactUs />
+      <Footer />
     </>
   )
 }
