@@ -40,6 +40,10 @@ const CaseStudiesBlock = () => {
       <div className="hidden lg:flex bg-[#191A23] rounded-[45px] w-[96vw] max-w-[1240px] lg:h-[250px] h-[320px] px-4 md:px-10 md:py-8 items-stretch mt-10">
         {caseStudiesData.map((item, idx) => (
           <div key={item.id} className={`flex flex-col justify-between flex-1 px-6 py-10 ${idx !== 2 ? 'border-r border-white' : ''}`}>
+            {/* If item.image exists, use public path */}
+            {item.image && (
+              <img src={item.image} alt={item.title || 'Case Study'} className="mb-4 w-full max-h-[120px] object-contain rounded" />
+            )}
             <p className="text-white font-space-grotesk text-base font-normal mb-8">
               {item.description}
             </p>
@@ -54,6 +58,10 @@ const CaseStudiesBlock = () => {
         <div className="flex flex-col md:flex-row md:divide-x md:divide-white">
           {caseStudiesData.map((item) => (
             <div key={item.id} className="flex-1 px-6 py-8 flex flex-col justify-between">
+              {/* If item.image exists, use public path */}
+              {item.image && (
+                <img src={item.image} alt={item.title || 'Case Study'} className="mb-4 w-full max-h-[120px] object-contain rounded" />
+              )}
               <p className="text-white font-space-grotesk text-base font-normal mb-8">
                 {item.description}
               </p>
@@ -74,6 +82,10 @@ const CaseStudiesBlock = () => {
                 className={`bg-[#191A23] rounded-[45px] min-w-[90vw] max-w-[90vw] h-[240px] flex flex-col justify-between px-6 py-10 mr-2 snap-center ${active === idx ? 'ring-2 ring-[#B9FF66]' : ''}`}
                 style={{ scrollSnapAlign: 'center' }}
               >
+                {/* If item.image exists, use public path */}
+                {item.image && (
+                  <img src={item.image} alt={item.title || 'Case Study'} className="mb-4 w-full max-h-[120px] object-contain rounded" />
+                )}
                 <p className="text-white font-space-grotesk text-base font-normal mb-8">
                   {item.description}
                 </p>

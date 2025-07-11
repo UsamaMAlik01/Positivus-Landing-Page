@@ -1,7 +1,7 @@
 import React from "react";
 import { Plus, Minus } from "lucide-react";
 
-const ProcessBlock = ({ number, title, description, expanded, onClick }) => {
+const ProcessBlock = ({ number, title, description, expanded, onClick, image }) => {
   return (
     <div
       className={`w-[96vw] max-w-[1234px] mx-auto my-4 rounded-[45px] border border-[#191A23] shadow-[0px_5px_0px_0px_#191A23] transition-all duration-500 ease-in-out overflow-hidden px-5 md:px-[60px] ${expanded ? 'bg-[#B9FF66] py-8 md:py-[41px]' : 'bg-[#F3F3F3] h-[70px] md:h-[100px] flex items-center'}`}
@@ -34,6 +34,10 @@ const ProcessBlock = ({ number, title, description, expanded, onClick }) => {
           )}
         </button>
       </div>
+      {/* If image exists, use public path */}
+      {image && (
+        <img src={image} alt={title || 'Process'} className="ml-6 w-[60px] h-[60px] object-contain rounded" />
+      )}
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${expanded ? 'max-h-[500px] opacity-100 py-6' : 'max-h-0 opacity-0 py-0'}`}> 
         {expanded && (
           <>

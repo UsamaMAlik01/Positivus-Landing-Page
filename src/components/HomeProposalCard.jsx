@@ -1,5 +1,5 @@
 import React from "react";
-import StarEmoji from "../assets/Star-Emoji.png";
+// import StarEmoji from "../assets/Star-Emoji.png";
 
 const HomeProposalCard = () => {
   return (
@@ -22,7 +22,7 @@ const HomeProposalCard = () => {
         </div>
         <div className="hidden md:flex items-center h-full">
           <img
-            src={StarEmoji}
+            src={'/Star-Emoji.png'}
             alt="Star Emoji"
             className="md:w-[240px] md:h-[240px] lg:h-[300px] lg:w-[500px] w-auto object-contain"
           />

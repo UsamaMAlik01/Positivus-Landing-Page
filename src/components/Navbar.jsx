@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import Logo from '../assets/Logo.jpg';
-
 // Navigation links with labels and URLs
 const navLinks = [
   { label: 'About us', url: '/about' },
@@ -18,13 +16,13 @@ export default function Navbar() {
   const quoteBtn = { label: 'Request a quote', url: '/quote' };
 
   return (
-    <nav className="w-full bg-white shadow-sm fixed top-0 left-0 z-50 mt-6">
+    <nav className="w-full bg-white shadow-sm fixed top-0 left-0 z-50 mt-6 md:mt-20">
       <div className="max-w-[1440px] mx-auto flex items-center justify-between h-[68px] md:h-[70px] px-4 md:px-16 lg:px-[100px]">
         {/* Logo */}
         <div className="flex items-center h-[56px] py-2">
           <a href="/" aria-label="Home">
             <img
-              src={Logo}
+              src={'/Logo.jpg'}
               alt="Logo"
               className="h-7 max-w-[120px] md:h-9 md:max-w-[220px] w-auto object-contain"
             />
@@ -57,7 +55,7 @@ export default function Navbar() {
             className="p-2 focus:outline-none"
             aria-label="Toggle menu"
           >
-            {menuOpen ? <X size={28} className="md:w-10 md:h-10 w-7 h-7" /> : <Menu size={28} className="md:w-10 md:h-10 w-7 h-7" />}
+            {menuOpen ? <X size={40} className="md:w-10 md:h-10 w-7 h-7" /> : <Menu size={40} className="md:w-10 md:h-10 w-7 h-7" />}
           </button>
         </div>
       </div>

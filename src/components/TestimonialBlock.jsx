@@ -95,6 +95,10 @@ const TestimonialBlock = () => {
                   className={`relative bg-[#191A23] border rounded-[32px] px-6 py-8 md:px-10 md:py-10 flex flex-col items-center w-full h-full border-[#B9FF66] shadow-[0_5px_0_0_#B9FF66] opacity-100 z-10`}
                   style={{ transition: 'opacity 0.3s, box-shadow 0.3s' }}
                 >
+                  {/* If testimonialData[current].image exists, use public path */}
+                  {testimonialData[current].image && (
+                    <img src={testimonialData[current].image} alt={testimonialData[current].name || 'Testimonial'} className="mb-4 w-[60px] h-[60px] object-contain rounded-full" />
+                  )}
                   <p className="text-white text-base md:text-lg font-space-grotesk text-center mb-8 mt-4">{testimonialData[current].Saying}</p>
                   <div className="w-full flex flex-col items-start mt-auto">
                     <span className="text-[#B9FF66] font-bold text-lg md:text-xl font-space-grotesk">{testimonialData[current].name}</span>
@@ -122,6 +126,10 @@ const TestimonialBlock = () => {
                   className={`relative bg-[#191A23] border rounded-[32px] px-6 py-8 flex flex-col items-center ${bubbleMinHeight} ${bubbleWidth} snap-center flex-shrink-0 mx-2 border-[#B9FF66] shadow-[0_5px_0_0_#B9FF66] opacity-100 z-10`}
                   style={{ transition: 'opacity 0.3s, box-shadow 0.3s' }}
                 >
+                  {/* If item.image exists, use public path */}
+                  {item.image && (
+                    <img src={item.image} alt={item.name || 'Testimonial'} className="mb-4 w-[60px] h-[60px] object-contain rounded-full" />
+                  )}
                   <p className="text-white text-base font-space-grotesk text-center mb-8 mt-4">{item.Saying}</p>
                   <div className="w-full flex flex-col items-start mt-auto">
                     <span className="text-[#B9FF66] font-bold text-lg font-space-grotesk">{item.name}</span>

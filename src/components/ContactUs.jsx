@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import contactQuotes from "../data/contactQoute";
-import ContactSideImg from "../assets/ContactSideImg.png";
+// import ContactSideImg from "../assets/ContactSideImg.png";
 
 const getBreakpoint = () => {
   if (typeof window !== 'undefined') {
@@ -118,7 +118,7 @@ const ContactUs = () => {
         {/* Right Side Image (hidden on mobile, 50% out of box) */}
         <div className="hidden md:block flex-1 relative order-1 md:order-2 lg:right-[-22%] right-[-54%]">
           <img
-            src={ContactSideImg}
+            src={'/ContactSideImg.png'}
             alt="Contact"
             className="absolute right-[-25%] top-1/2 -translate-y-1/2 max-h-[500px] w-auto object-contain z-10"
             style={{ maxWidth: 'unset' }}

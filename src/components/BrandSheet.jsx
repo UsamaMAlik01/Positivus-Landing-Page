@@ -1,12 +1,13 @@
 import React from 'react';
-import amazon from '../assets/amazon.png';
-import dribbble from '../assets/dribbble.png';
-import hubspot from '../assets/hubspot.png';
-import netflix from '../assets/netflix.png';
-import zoom from '../assets/zoom.png';
 import Marquee from "react-fast-marquee";
 
-const logos = [amazon, dribbble, hubspot, netflix, zoom];
+const logos = [
+  '/amazon.png',
+  '/dribbble.png',
+  '/hubspot.png',
+  '/netflix.png',
+  '/zoom.png',
+];
 
 export default function BrandSheet() {
   return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import Illustration from '../assets/Illustration.jpg';
 
 export default function Header() {
   return (
@@ -12,7 +11,7 @@ export default function Header() {
         {/* Mobile: Image comes after header, before text */}
         <div className="flex justify-center items-center w-full order-2 lg:hidden mb-4">
           <img
-            src={Illustration}
+            src={'/Illustration.jpg'}
             alt="Digital marketing illustration"
             className="w-full max-w-[320px] md:max-w-[400px] h-auto rounded-lg border border-gray-200"
             style={{ aspectRatio: '600/515' }}
@@ -32,7 +31,7 @@ export default function Header() {
       {/* Right: Illustration for desktop only */}
       <div className="hidden lg:flex justify-center items-center w-full lg:w-[600px] h-auto lg:h-[515px]">
         <img
-          src={Illustration}
+          src={'/Illustration.jpg'}
           alt="Digital marketing illustration"
           className="w-full max-w-[600px] h-auto rounded-lg border border-gray-200"
           style={{ height: 515 }}
