@@ -1,0 +1,63 @@
+@import '@fontsource/space-grotesk';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 18s linear infinite;
+  }
+  .animate-marquee-reverse {
+    animation: marquee-reverse 18s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* HeadingAndSubheading styles */
+.heading-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0 100px;
+  gap: 40px;
+  box-sizing: border-box;
+}
+.heading-text {
+  background: #B9FF66;
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+}
+.subheading-text {
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .heading-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    gap: 16px;
+  }
+  .heading-text {
+    font-size: 1.3rem;
+    padding: 0.4em 0.8em;
+  }
+  .subheading-text {
+    font-size: 1rem;
+  }
+}
