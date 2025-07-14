@@ -4,7 +4,7 @@ import { Plus, Minus } from "lucide-react";
 const ProcessBlock = ({ number, title, description, expanded, onClick, image }) => {
   return (
     <div
-      className={`w-[96vw] max-w-[1234px] mx-auto my-4 rounded-[45px] border border-[#191A23] shadow-[0px_5px_0px_0px_#191A23] transition-all duration-500 ease-in-out overflow-hidden px-5 md:px-[60px] ${expanded ? 'bg-[#B9FF66] py-8 md:py-[41px]' : 'bg-[#F3F3F3] h-[70px] md:h-[100px] flex items-center'}`}
+      className={`w-[96vw] max-w-[1234px] mx-auto my-4 rounded-[45px] border border-[#191A23] shadow-[0px_5px_0px_0px_#191A23] transition-all duration-500 ease-in-out overflow-hidden px-5 md:px-[60px] ${expanded ? 'bg-[#b9ff66] py-8 md:py-[41px]' : 'bg-[#F3F3F3] h-[70px] md:h-[100px] flex items-center'}`}
       onClick={onClick}
       role="button"
       tabIndex={0}

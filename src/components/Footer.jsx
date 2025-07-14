@@ -1,7 +1,9 @@
 import React from 'react';
 import { Linkedin, Facebook, Twitter } from 'lucide-react';
+import { NavLink, Link } from 'react-router-dom';
 
 const navLinks = [
+  { label: 'Home', url: '/' },
   { label: 'About us', url: '/about' },
   { label: 'Services', url: '/services' },
   { label: 'Use Cases', url: '/use-cases' },
@@ -22,13 +24,14 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row md:flex-wrap md:justify-between md:items-center gap-8 md:gap-6 lg:gap-[60px] w-full overflow-x-auto">
         {/* Logo, Nav, Socials - Desktop/Tablet */}
         <div className="hidden md:flex w-full flex-row flex-wrap items-center justify-between gap-6 md:gap-8 lg:gap-12">
+          <Link to="/">
           <img src="/LogoWhite.png" alt="Positivus Logo" className="w-[150px] md:w-[180px] h-auto" />
-          <nav className="flex flex-wrap gap-4 md:gap-6 lg:gap-8 text-white font-space-grotesk text-base font-normal ml-0 md:ml-8">
-            {navLinks.map(link => (
-              <a key={link.label} href={link.url} className="hover:underline whitespace-nowrap">
-                {link.label}
-              </a>
-            ))}
+          </Link>
+          
+          <nav className="flex flex-wrap gap-4 md:gap-6 lg:gap-8 text-white font-space-grotesk text-base font-normal ml-0 md:ml-8 ">
+            {navLinks.map(link =>
+              <NavLink key={link.label} to={link.url} className={({isActive})=>(`hover:underline whitespace-nowrap p-2 rounded-md ${isActive ? 'bg-[#B9FF66]' : 'bg-[#191A23]'} ${isActive ? 'text-black' : 'text-white'}`)}>{link.label}</NavLink>
+            )}
           </nav>
           <div className="flex flex-row gap-4 md:gap-6 ml-0 md:ml-8">
             {socialLinks.map(link => {
@@ -45,11 +48,9 @@ export default function Footer() {
         <div className="flex flex-col md:hidden items-center w-full gap-4">
           <img src="/LogoWhite.png" alt="Positivus Logo" className="w-[150px] md:w-[180px] h-auto mx-auto" />
           <nav className="flex flex-col gap-2 text-white font-space-grotesk text-base font-normal items-center">
-            {navLinks.map(link => (
-              <a key={link.label} href={link.url} className="hover:underline">
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map(link =>
+              <NavLink key={link.label} to={link.url} className={(isActive)=>(`hover:underline ${isActive ? 'bg-[#B9FF66]' : 'bg-black'}`)}>{link.label}</NavLink>
+            )}
           </nav>
           <div className="flex flex-row gap-6 justify-center mt-2">
             {socialLinks.map(link => {
