@@ -30,7 +30,15 @@ export default function Footer() {
           
           <nav className="flex flex-wrap gap-4 md:gap-6 lg:gap-8 text-white font-space-grotesk text-base font-normal ml-0 md:ml-8 ">
             {navLinks.map(link =>
-              <NavLink key={link.label} to={link.url} className={({isActive})=>(`hover:underline whitespace-nowrap p-2 rounded-md ${isActive ? 'bg-[#B9FF66]' : 'bg-[#191A23]'} ${isActive ? 'text-black' : 'text-white'}`)}>{link.label}</NavLink>
+              <NavLink 
+                key={link.label} 
+                to={`${link.url}`} 
+                className={({isActive}) => 
+                  `hover:underline whitespace-nowrap p-2 rounded-md ${isActive ? '!bg-[#B9FF36] !text-black' : 'text-white'}`
+                }
+              >
+                {link.label}
+              </NavLink>
             )}
           </nav>
           <div className="flex flex-row gap-4 md:gap-6 ml-0 md:ml-8">
@@ -49,7 +57,15 @@ export default function Footer() {
           <img src="/LogoWhite.png" alt="Positivus Logo" className="w-[150px] md:w-[180px] h-auto mx-auto" />
           <nav className="flex flex-col gap-2 text-white font-space-grotesk text-base font-normal items-center">
             {navLinks.map(link =>
-              <NavLink key={link.label} to={link.url} className={(isActive)=>(`hover:underline ${isActive ? 'bg-[#B9FF66]' : 'bg-black'}`)}>{link.label}</NavLink>
+              <NavLink 
+                key={link.label} 
+                to={`${link.url}`} 
+                className={({isActive}) => 
+                  `hover:underline bg-[#191A23] whitespace-nowrap p-2 rounded-md ${isActive ? '!bg-[#B9FF36] !text-black' : 'text-white'}`
+                }
+              >
+                {link.label}
+              </NavLink>
             )}
           </nav>
           <div className="flex flex-row gap-6 justify-center mt-2">

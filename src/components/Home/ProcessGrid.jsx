@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import processBlockData from "../data/processBlockData";
+import processBlockData from "../../data/processBlockData.js";
 import ProcessBlock from "./ProcessBlock";
 
 const ProcessGrid = () => {

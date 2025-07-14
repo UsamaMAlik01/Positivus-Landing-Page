@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import teamData from "../data/teamData";
+import teamData from "../../data/teamData.js";
 import TeamBlock from "./TeamBlock";
 
 const TeamGrid = () => {

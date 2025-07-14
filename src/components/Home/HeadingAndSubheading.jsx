@@ -1,5 +1,5 @@
 import React from "react";
-import headingData from "../data/headingData";
+import headingData from "../../data/headingData";
 
 const HeadingAndSubheading = ({ id }) => {
   const data = headingData.find(item => item.id === id);

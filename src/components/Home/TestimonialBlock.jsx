@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import testimonialData from "../data/testimonialData";
+import testimonialData from "../../data/testimonialData.js";
 import { ChevronLeft, ChevronRight, Sparkle } from "lucide-react";
 
 const getBreakpoint = () => {

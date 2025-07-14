@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NavLink, Link } from 'react-router-dom';
-import About from './About';
 // Navigation links with labels and anchor URLs
 const navLinks = [
   { label: 'Home', url: '/' },          
@@ -36,10 +35,10 @@ export default function Navbar() {
           {navLinks.map(({ label, url }) => (
             <NavLink
               key={label}
-              to={url}
-              className={({ isActive }) => (
-                `bg-transparent border-none outline-none font-space-grotesk text-sm ${isActive ? 'bg-[#b9ff66]' : 'bg-white'} md:text-base lg:text-[16px] font-normal leading-6 px-2 py-1 whitespace-nowrap hover:text-gray-700 transition-colors rounded-md cursor-pointer width:72 height:24 `
-              )}
+              to={`${url}`}
+              className={({ isActive }) => 
+                `bg-transparent border-none outline-none font-space-grotesk text-sm md:text-base lg:text-[16px] font-normal leading-6 px-2 py-1 whitespace-nowrap hover:text-gray-700 transition-colors rounded-md cursor-pointer ${isActive ? '!bg-[#b9ff66] !text-black' : 'bg-white'}`
+              }
             >
               {label}
             </NavLink>
@@ -70,16 +69,17 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-      {/* Mobile Dropdown */}
+            {/* Mobile Dropdown */}
       {menuOpen && (
         <div className="lg:hidden bg-white shadow-lg absolute top-[68px] left-0 w-full flex flex-col items-center py-4 gap-2 z-40 animate-fade-in">
           {navLinks.map(({ label, url }) => (
             <NavLink
               key={label}
-              to={url}
-              className={({ isActive }) => (
-                `w-11/12 text-left font-space-grotesk text-lg py-3 px-4 hover:bg-gray-100 ${isActive ? 'bg-[#B9FF66]' : 'bg-gray-100'} rounded transition-colors whitespace-nowrap cursor-pointer `
-              )}
+              to={`${url}`}
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) => 
+                `w-11/12 text-left font-space-grotesk text-lg py-3 px-4 hover:bg-gray-100 rounded transition-colors whitespace-nowrap cursor-pointer ${isActive ? '!bg-[#B9FF66] !text-black' : 'bg-gray-100'}`
+              }
             >
               {label}
             </NavLink>

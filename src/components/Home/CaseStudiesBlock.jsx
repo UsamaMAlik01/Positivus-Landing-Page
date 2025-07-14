@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import caseStudiesData from "../data/caseStudiesData";
+import caseStudiesData from "../../data/caseStudiesData.js";
 import { ArrowUpRight } from "lucide-react";
 
 const CaseStudiesBlock = () => {

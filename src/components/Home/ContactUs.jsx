@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import contactQuotes from "../data/contactQoute";
+import contactQuotes from "../../data/contactQoute.js";
 // import ContactSideImg from "../assets/ContactSideImg.png";
 
 const getBreakpoint = () => {
