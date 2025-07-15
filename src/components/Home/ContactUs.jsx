@@ -120,7 +120,7 @@ const ContactUs = () => {
           <img
             src={'/ContactSideImg.png'}
             alt="Contact"
-            className="absolute right-[-25%] top-1/2 -translate-y-1/2 lg:max-h-[500px] lg:w-auto object-contain z-10 h-[500px] w-[300px]"
+            className="absolute right-0 top-1/2 -translate-y-1/2 max-w-full max-h-[80%] h-auto w-auto object-contain z-10 md:left-[-22%] lg:left-0"
             style={{ maxWidth: 'unset' }}
           />
         </div>
