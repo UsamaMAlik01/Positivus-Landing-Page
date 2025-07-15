@@ -5,7 +5,7 @@ const HomeProposalCard = () => {
   return (
     <div className="w-full flex justify-center items-center h-[394px] md:h-[394px] mb-[-30px]">
       <div className="relative flex flex-col md:flex-row items-center justify-between bg-[#F3F3F3] rounded-[45px] w-[96vw] max-w-[1240px] h-[320px] md:h-[260px] px-4 md:px-10 md:py-8 gap-8 md:gap-[120px] lg:gap-[275px]">
-        <div className="flex flex-col justify-center h-full w-full md:w-auto py-6 md:py-0">
+        <div className="flex flex-col justify-center h-full w-full md:w-auto py-10 md:py-0">
           <h2 className="font-space-grotesk font-bold text-[30px] md:text-[26px] lg:text-[30px] leading-[100%] mb-6 text-black">
             Let’s make things happen
           </h2>
@@ -20,7 +20,7 @@ const HomeProposalCard = () => {
             </button>
           </div>
         </div>
-        <div className="hidden md:flex items-center h-full">
+        <div className="hidden md:flex items-center h-full bg">
           <img
             src={'/Star-Emoji.png'}
             alt="Star Emoji"

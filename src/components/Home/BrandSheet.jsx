@@ -13,7 +13,7 @@ export default function BrandSheet() {
   return (
     <div className="w-full flex flex-col gap-2">
       {/* Desktop & md: Single marquee right to left */}
-      <div className="hidden md:block w-full h-[56px]  mt-16">
+      <div className="hidden md:block w-[98%] h-[56px]  mt-16">
         <Marquee speed={40} pauseOnHover={true} gradient={false} className="flex items-center h-[56px]">
           {logos.concat(logos).map((logo, idx) => (
             <img

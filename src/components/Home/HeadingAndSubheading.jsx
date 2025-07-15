@@ -5,7 +5,7 @@ const HeadingAndSubheading = ({ id }) => {
   const data = headingData.find(item => item.id === id);
   if (!data) return null;
   return (
-    <div className="w-full flex flex-col px-5 gap-4 box-border md:flex-row items-center md:px-[150px] md:gap-6 lg:mt-20 mt-10">
+    <div className="w-full flex flex-col gap-4 box-border md:flex-row items-center md:gap-6 lg:mt-20 mt-10 max-w-screen-xl mx-auto px-5 md:px-10 lg:px-16">
       {/* If data.image exists, use public path */}
       {data.image && (
         <img src={data.image} alt={data.heading || 'Heading'} className="mb-2 w-full max-w-[120px] object-contain rounded" />

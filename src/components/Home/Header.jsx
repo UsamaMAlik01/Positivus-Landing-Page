@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Header() {
   return (
-    <section className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-[515px] max-w-[1440px] mx-auto px-4 md:px-8 lg:px-[100px] py-8 pt-24 lg:pt-32 gap-10 lg:gap-0 md:mt-16 lg:mt0-0">
+    <section className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-[515px] max-w-[1440px] mx-auto px-4 md:px-8 lg:px-auto  py-8 pt-24 lg:pt-32 gap-10 lg:gap-0 md:mt-16 lg:mt0-0">
       {/* Left: Text Box */}
-      <div className="flex flex-col w-full lg:w-[531px] h-auto lg:h-[481px] gap-6 lg:gap-[35px] mb-8 lg:mb-0">
+      <div className="flex flex-col w-full lg:w-[531px] h-auto lg:h-[481px] gap-6 lg:gap-[35px] mb-8 lg:mb-0 ">
         <h1 className="font-space-grotesk font-medium text-[2.2rem] md:text-5xl lg:text-[60px] leading-[100%] mb-4 text-black order-1">
           Navigating the digital landscape for success
         </h1>
@@ -29,7 +29,7 @@ export default function Header() {
         </a>
       </div>
       {/* Right: Illustration for desktop only */}
-      <div className="hidden lg:flex justify-center items-center w-full lg:w-[600px] h-auto lg:h-[515px]">
+      <div className="hidden lg:flex justify-center items-center w-full lg:max-w-[600px] h-auto lg:h-[515px]">
         <img
           src={'/Illustration.jpg'}
           alt="Digital marketing illustration"
